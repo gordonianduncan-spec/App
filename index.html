@@ -93,32 +93,29 @@
         </section>
 
         <!-- Contact Form Section -->
-        <section id="contact" class="section-padding bg-white rounded-2xl card">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Let's Get Started!</h2>
-                <p class="text-lg text-gray-600 mb-6 text-center">
-                    Ready to take the next step? Fill out the form below to schedule your free 15-minute consultation.
-                </p>
-                <!-- This form is a placeholder. You would replace this with code from a service like Formspree. -->
-                <form class="space-y-4">
-                    <div>
-                        <label for="name" class="block text-gray-700 font-medium">Your Name</label>
-                        <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-gray-700 font-medium">Your Email</label>
-                        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-gray-700 font-medium">Your Message</label>
-                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-indigo-500 text-white px-4 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300">
-                        Request Consultation
-                    </button>
-                </form>
-            </div>
-        </section>
+       <section id="contact" class="section-padding bg-white rounded-2xl card">
+        <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Let's Get Started!</h2>
+        <p class="text-lg text-gray-600 mb-6 text-center">
+            Ready to take the next step? Fill out the form below to schedule your free 15-minute consultation.
+        </p>
+        
+        <form
+          action="https://formspree.io/f/mqadabvo"
+          method="POST"
+        >
+          <label>
+            Your email:
+            <input type="email" name="email">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+        </div>
+       </section>
 
     </main>
 
