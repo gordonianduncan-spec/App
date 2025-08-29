@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous", "authenticated"],
+      "redirect": "https://<YOUR-APP-SERVICE-URL>/api/*"
+    }
+  ]
+}
