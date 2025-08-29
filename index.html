@@ -2,158 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn English Now</title>
-    <!-- Tailwind CSS CDN for easy styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>AI Grammar Checker</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fc;
-        }
-        .section-padding {
-            padding: 4rem 1.5rem; /* Responsive padding */
-        }
-        .card {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+        body { font-family: sans-serif; padding: 20px; }
+        textarea { width: 100%; height: 150px; }
+        button { padding: 10px 20px; margin-top: 10px; }
+        #response { margin-top: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9; }
     </style>
 </head>
 <body>
-
-    <!-- Header & Navigation (Simple and Clean) -->
-    <header class="bg-indigo-600 text-white p-4 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <h1 class="text-3xl font-bold mb-2 md:mb-0">Learn English Now</h1>
-            <nav class="space-x-4">
-                <a href="#about" class="hover:text-gray-200 transition-colors duration-300">Why Me?</a>
-                <a href="#services" class="hover:text-gray-200 transition-colors duration-300">What I Offer</a>
-                <a href="#contact" class="hover:text-gray-200 transition-colors duration-300">Contact</a>
-            </nav>
+    <h1>📝 AI Grammar Checker</h1>
+    <p>Type or paste your text below to get grammar and spelling feedback.</p>
+    <textarea id="userInput" placeholder="Type your text here..."></textarea>
+    <button id="submitBtn">Check My Grammar</button>
+    <div id="response">
         </div>
-    </header>
-
-    <!-- Main Content Sections -->
-    <main class="container mx-auto px-6 md:px-10">
-
-        <!-- Home/Hero Section -->
-        <section id="hero" class="section-padding text-center">
-            <div class="bg-white p-8 md:p-12 rounded-2xl card">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">Learn English Now</h2>
-                <p class="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-                    Master fluency and confidence with personalized 1-on-1 online lessons tailored just for you.
-                </p>
-                <a href="#contact" class="inline-block bg-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300">
-                    Complete your details and I will be in touch
-                </a>
-            </div>
-        </section>
-
-        <!-- "Why Me" Section (About) -->
-        <section id="about" class="section-padding bg-white rounded-2xl card">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Why Learn with Me?</h2>
-                <div class="space-y-6 text-lg text-gray-600">
-                    <p>
-                        I'm passionate about helping students move beyond grammar rules and truly speak English with confidence. My lessons are dynamic and focus on **real-world conversations**, not just textbook drills. I create a supportive and engaging environment where you can practice when you want.
-                    </p>
-                    <p>
-                        Whether you're looking to improve your fluency for travel, business, or a specific exam, I'm here to guide you every step of the way. I believe that learning a language should be an exciting journey, and I'm dedicated to making your experience both effective and enjoyable.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- "What I Offer" Section (Services) -->
-        <section id="services" class="section-padding">
-            <div class="bg-white p-8 md:p-12 rounded-2xl card">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">What I Offer</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="bg-indigo-50 p-6 rounded-xl text-center">
-                        <h3 class="text-2xl font-semibold text-indigo-800 mb-2">1-on-1 Conversational Practice</h3>
-                        <p class="text-gray-600">Build your fluency and confidence through focused, real-time conversation on topics that interest you.</p>
-                    </div>
-                    <!-- Service Card 2 -->
-                    <div class="bg-indigo-50 p-6 rounded-xl text-center">
-                        <h3 class="text-2xl font-semibold text-indigo-800 mb-2">Business English</h3>
-                        <p class="text-gray-600">Improve your communication skills for meetings, presentations, and professional correspondence.</p>
-                    </div>
-                    <!-- Service Card 3 -->
-                    <div class="bg-indigo-50 p-6 rounded-xl text-center">
-                        <h3 class="text-2xl font-semibold text-indigo-800 mb-2">IELTS Speaking Prep</h3>
-                        <p class="text-gray-600">Prepare for the IELTS exam with targeted practice and feedback on speaking skills and exam strategy.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section id="contact" class="section-padding bg-white rounded-2xl card">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">Let's Get Started!</h2>
-                <p class="text-lg text-gray-600 mb-6 text-center">
-                    Ready to take the next step? Fill out the form below and I will get in touch.
-                </p>
-                
-                <div class="w-full max-w-lg p-8 mx-auto bg-white rounded-xl shadow-lg border border-gray-200">
-                    <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">Get in Touch</h2>
-                    <form action="https://submit-form.com/n9gevaka1" method="POST" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                placeholder="John Doe" 
-                                required 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
-                            />
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                placeholder="you@example.com" 
-                                required 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"
-                            />
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="4" 
-                                placeholder="Your message here..." 
-                                required 
-                                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out resize-none"
-                            ></textarea>
-                        </div>
-                        <button 
-                            type="submit" 
-                            class="w-full py-3 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-150 ease-in-out"
-                        >
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6 mt-10">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2024 Learn English Now. All rights reserved.</p>
-        </div>
-    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
