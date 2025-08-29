@@ -3,7 +3,7 @@
     {
       "route": "/api/*",
       "allowedRoles": ["anonymous", "authenticated"],
-      "redirect": "https://<YOUR-APP-SERVICE-URL>/api/*"
+      "redirect": "https://backendwebapp-h9h9cchbh3djd2gn.centralus-01.azurewebsites.net/"
     }
   ]
 }
